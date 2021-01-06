@@ -11,9 +11,7 @@ qq = os.environ['QQ']
 
 def main(*args):
     api = "https://api.xmdpay.cn/API/mpz/api.php?qq="+qq
-    data = requests.get(api, timeout=600).json()
-    if data.get('msg') == "success":
-        print("刷赞成功")
+    data = requests.get(api, timeout=600)
     print(data)
 
 
