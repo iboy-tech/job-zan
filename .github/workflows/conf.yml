@@ -1,12 +1,12 @@
 name: QQ刷赞
 on:
   push:
-    branches: [master]
+    branches: [main]
   pull_request:
-    branches: [master]
+    branches: [main]
   schedule:
     # - cron: 0 22,14 * * * 北京时间每天8点自动执行
-    - cron: 43 * * * *
+    - cron: */5 * * * *
   watch:
     types: started
 
