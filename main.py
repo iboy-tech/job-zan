@@ -3,6 +3,7 @@
 
 import os
 import requests
+import time
 import requests.packages.urllib3.util.ssl_
 requests.packages.urllib3.util.ssl_.DEFAULT_CIPHERS = 'ALL'
 
@@ -15,6 +16,7 @@ def main(*args):
         data = requests.get(api, timeout=600)
         if "success" in data.text:
             print("第 {} 次刷赞成功".format(i+1))
+            time.sleep(10)
 
 
 if __name__ == '__main__':
