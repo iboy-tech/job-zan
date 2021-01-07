@@ -14,7 +14,7 @@ def main(*args):
     for i in range(0, 21):
         data = requests.get(api, timeout=600)
         if "success" in data.text:
-            print("第 {} 次刷赞成功".format(i))
+            print("第 {} 次刷赞成功".format(i+1))
 
 
 if __name__ == '__main__':
